@@ -44,7 +44,7 @@ interface Checklist {
 const IslamicDailyChecklist = () => {
   const [expandedDuas, setExpandedDuas] = useState<string[]>([]);
   const [progress, setProgress] = useState(0);
-  const [date, setDate] = useState(new Date());
+  const date = new Date();
   const [checklist, setChecklist] = useState<Checklist>({
     preFajr: {
       title: "Pre-Fajr",
@@ -278,7 +278,7 @@ const IslamicDailyChecklist = () => {
                 {progress === 100 ? (
                   <div className="flex items-center">
                     <Check className="w-4 h-4 mr-2" />
-                    Alhamdulillah! You've completed all tasks for today.
+                    Alhamdulillah! You&apos;ve completed all tasks for today.
                   </div>
                 ) : (
                   `${Math.round(progress)}% of daily practices completed`
